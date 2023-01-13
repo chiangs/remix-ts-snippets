@@ -1,0 +1,20 @@
+{
+  "name": "remix-snippets",
+  "displayName": "remix-snippets",
+  "description": "Snippets for writing Remix with TypeScript code faster!",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.74.0"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "typescript",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  }
+}
