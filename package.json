@@ -1,5 +1,5 @@
 {
-    "name": "remix-snippets",
+    "name": "remix-ts-snippets",
     "version": "1.0.0",
     "publisher": "chiangs",
     "author": {
@@ -9,7 +9,7 @@
         "vscode": "^1.74.0"
     },
     "license": "MIT",
-    "displayName": "remix-snippets",
+    "displayName": "remix-ts-snippets",
     "description": "Snippets for writing Remix with TypeScript code faster!",
     "categories": [
         "Snippets"
@@ -36,11 +36,11 @@
     },
     "icon": "images/icon.png",
     "bugs": {
-        "url": "https://github.com/chiangs/remix-snippets/issues"
+        "url": "https://github.com/chiangs/remix-ts-snippets/issues"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/chiangs/remix-snippets.git"
+        "url": "https://github.com/chiangs/remix-ts-snippets.git"
     },
-    "homepage": "https://github.com/chiangs/remix-snippets/README.md"
+    "homepage": "https://github.com/chiangs/remix-ts-snippets/README.md"
 }
