@@ -1,1 +1,90 @@
-{}
+{
+    "Remix MetaFunction": {
+        "prefix": "rmx-meta",
+        "body": [
+            "import type { MetaFunction } from '@remix-run/node';",
+            "export const meta: MetaFunction = () => (${1:key}:${2:value}});"
+        ],
+        "description": "Remix meta function"
+    },
+    "Remix LinksFunction": {
+        "prefix": "rmx-links",
+        "body": [
+            "import type { LinksFunction } from '@remix-run/node';",
+            "import ${1:linkName} from '${2:path}';",
+            "export const links: LinksFunction = () => [{rel:'stylesheet', href: ${1:linkName}}]"
+        ],
+        "description": "Remix links function"
+    },
+    "Remix ActionsFunction": {
+        "prefix": "rmx-action",
+        "body": [
+            "import type { ActionsFunction } from '@remix-run/node';",
+            "export const action: ActionsFunction = ({request, params}) => {}"
+        ],
+        "description": "Remix actions function"
+    },
+    "Remix LoaderFunction": {
+        "prefix": "rmx-loader",
+        "body": [
+            "import type { LoaderFunction } from 'react-router';",
+            "export const loader: LoaderFunction = ({request, params}) => {}"
+        ],
+        "description": "Remix loader function"
+    },
+    "Remix ErrorBoundary": {
+        "prefix": "rmx-error",
+        "body": [
+            "import type { ErrorBoundaryComponent } from '@remix-run/node';",
+            "export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => ${1:errorComponent};"
+        ],
+        "description": "Remix error boundary component"
+    },
+    "Remix CatchBoundary": {
+        "prefix": "rmx-catch",
+        "body": [
+            "import type { CatchBoundaryComponent } from '@remix-run/react';",
+            "export const CatchBoundary: CatchBoundaryComponent = ({ error }) => ${1:catchComponent};"
+        ],
+        "description": "Remix catch boundary component"
+    },
+    "Remix Basic Component with Props": {
+        "prefix": "rmx-bcp",
+        "body": [
+            "export const TEST_ID = '${1:testId}';",
+            "type Props = { ${2:key}: ${3:type} };",
+            "export const ${4:TM_FILENAME_BASE} = ({${2:key}}:Props) => <div data-testid={TEST_ID}></div>;"
+        ],
+        "description": "Remix basic component with props"
+    },
+    "Remix Basic Component": {
+        "prefix": "rmx-bc",
+        "body": [
+            "export const TEST_ID = '${1:testId}';",
+            "export const ${2:TM_FILENAME_BASE} = () => <div data-testid={TEST_ID}></div>;"
+        ],
+        "description": "Remix basic component"
+    },
+    "Remix Basic Route Component": {
+        "prefix": "rmx-rc",
+        "body": [
+            "export const ${1:TM_FILENAME_BASE} = () => <section>${2:componentUI}</section>;"
+        ],
+        "description": "Remix route component"
+    },
+    "Remix Route Component with all": {
+        "prefix": "rmx-rca",
+        "body": [
+            "import type { ErrorBoundaryComponent, LinksFunction, LoaderFunction, MetaFunction } from '@remix-run/node';",
+            "import type { CatchBoundaryComponent } from '@remix-run/react';",
+            "export const ${1:TM_FILENAME_BASE} = () => { return(<section></section>)};",
+            "export const loader: LoaderFunction = ({request, params}) => {}",
+            "export const action: ActionsFunction = ({request, params}) => {}",
+            "export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => ${2:errorComponent};",
+            "export const CatchBoundary: CatchBoundaryComponent = ({ error }) => ${3:catchComponent};",
+            "export const links: LinksFunction = () => [{rel:'stylesheet', href: '${4:linkName}' ];",
+            "export const meta: MetaFunction = () => (${5:key}:'${6:value}');"
+        ],
+        "description": "Remix Route Component with meta, links, loader, action, and boundaries"
+    }
+}
