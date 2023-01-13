@@ -1,50 +1,40 @@
 # Remix Snippets
 
-Welcome! This is the repo for the `remix-snippets` extension for Visual Studio Code.
+Welcome! This is the repo for the `remix-ts-snippets` extension for Visual Studio Code.
 
 - [Remix Snippets](#remix-snippets)
   - [Features](#features)
-  - [Requirements](#requirements)
-  - [Extension Settings](#extension-settings)
-  - [Known Issues](#known-issues)
   - [Release Notes](#release-notes)
+    - [1.1.0](#110)
     - [1.0.0](#100)
 
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+All the snippets utilise the arrow function syntax. I made all the ones I use most often, but feel free to request for any you are missing via issues.
 
-For example if there is an image subfolder under your extension project workspace:
+They include the import statements and have default positions for you to fill in missing info after insertion.
 
-\!\[feature X\]\(images/feature-x.png\)
+All commands start with `rmx:`. 
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
-
-All the snippets utilise the arrow function syntax.
-
-## Requirements
-
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: Enable/disable this extension.
-* `myExtension.thing`: Set to `blah` to do something.
-
-## Known Issues
-
-None so far, if you find any, please give me a shout in the [issues!](https://github.com/chiangs/remix-snippets/issues)
+| Function                        | Command     |
+| --------------------------------|------------ |
+| Meta                            | `rmx:meta`  |
+| Links                           | `rmx:links` |
+| Action                          | `rmx:action`|
+| Loader                          | `rmx:loader`|
+| ErrorBoundary                   | `rmx:error` |
+| CatchBoundary                   | `rmx:catch` |
+| Basic component                 | `rmx:bc`    |
+| Basic component w/ props        | `rmx:bcp`   |
+| Route component                 | `rmx:rc`    |
+| Route component with everything | `rmx:rca`   |
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
+### 1.1.0
+
+Update of README with commands and fix language support in manifest.
 
 ### 1.0.0
 
-Initial release of ***Remix Snippets***.
+Initial release of ***Remix TS Snippets***.

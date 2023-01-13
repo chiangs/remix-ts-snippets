@@ -1,6 +1,6 @@
 {
     "name": "remix-ts-snippets",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "publisher": "chiangs",
     "author": {
         "name": "Stephen Chiang"
@@ -29,7 +29,7 @@
     "contributes": {
         "snippets": [
             {
-                "language": "typescript",
+                "language": "typescriptreact",
                 "path": "./snippets/snippets.code-snippets"
             }
         ]
