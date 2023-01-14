@@ -53,7 +53,7 @@
         "body": [
             "export const TEST_ID = '${1:testId}';",
             "type Props = { ${2:key}: ${3:type} };",
-            "export const ${4:$TM_FILENAME_BASE} = ({${2:key}}:Props) => <div data-testid={TEST_ID}></div>;"
+            "export const ${4:$TM_FILENAME_BASE} = ({${2:key}}:Props) => { return(<div data-testid={TEST_ID}></div>)};"
         ],
         "description": "Remix basic component with props"
     },

@@ -5,6 +5,7 @@ Welcome! This is the repo for the `remix-ts-snippets` extension for Visual Studi
 - [Remix Snippets](#remix-snippets)
   - [Features](#features)
   - [Release Notes](#release-notes)
+    - [1.1.3](#113)
     - [1.1.2](#112)
     - [1.1.0](#110)
     - [1.0.0](#100)
@@ -31,6 +32,10 @@ All commands start with `rmx:`.
 | Route component with everything | `rmx:rca`   |
 
 ## Release Notes
+
+### 1.1.3
+
+Update `rmx:bcp` to have a return since it's likely there will be additional logic when given props.
 
 ### 1.1.2
 
