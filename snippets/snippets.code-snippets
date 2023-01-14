@@ -16,11 +16,11 @@
         ],
         "description": "Remix links function"
     },
-    "Remix ActionsFunction": {
+    "Remix ActionFunction": {
         "prefix": "rmx:action",
         "body": [
-            "import type { ActionsFunction } from '@remix-run/node';",
-            "export const action: ActionsFunction = ({request, params}) => { ${1} }"
+            "import type { ActionFunction } from '@remix-run/node';",
+            "export const action: ActionFunction = ({request, params}) => { ${1} }"
         ],
         "description": "Remix actions function"
     },
@@ -75,11 +75,11 @@
     "Remix Route Component with all": {
         "prefix": "rmx:rca",
         "body": [
-            "import type { ErrorBoundaryComponent, LinksFunction, LoaderFunction, MetaFunction } from '@remix-run/node';",
+            "import type { ActionFunction, ErrorBoundaryComponent, LinksFunction, LoaderFunction, MetaFunction } from '@remix-run/node';",
             "import type { CatchBoundaryComponent } from '@remix-run/react';",
             "export const ${1:$TM_FILENAME_BASE} = () => { return(<section></section>)};",
             "export const loader: LoaderFunction = ({request, params}) => {}",
-            "export const action: ActionsFunction = ({request, params}) => {}",
+            "export const action: ActionFunction = ({request, params}) => {}",
             "export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => <div>error boundary</div>",
             "export const CatchBoundary: CatchBoundaryComponent = ({ error }) => <div>catch boundary</div>",
             "export const links: LinksFunction = () => [];",
