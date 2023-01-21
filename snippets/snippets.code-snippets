@@ -7,6 +7,14 @@
         ],
         "description": "Remix meta function"
     },
+    "Remix v2MetaFunction": {
+        "prefix": "rmx:meta2",
+        "body": [
+            "import type { V2_MetaFunction } from '@remix-run/node';",
+            "export const meta: MetaFunction = () => { return [{ ${1:key}: '${2:value}' }]};"
+        ],
+        "description": "Remix meta function"
+    },
     "Remix LinksFunction": {
         "prefix": "rmx:links",
         "body": [
@@ -68,7 +76,8 @@
     "Remix Basic Route Component": {
         "prefix": "rmx:rc",
         "body": [
-            "export const ${1:$TM_FILENAME_BASE} = () => <section>${2:componentUI}</section>;"
+            "const ${1:$TM_FILENAME_BASE} = () => <section>${2:componentUI}</section>;",
+            "export default ${1:$TM_FILENAME_BASE}"
         ],
         "description": "Remix route component"
     },
@@ -77,7 +86,8 @@
         "body": [
             "import type { ActionFunction, ErrorBoundaryComponent, LinksFunction, LoaderFunction, MetaFunction } from '@remix-run/node';",
             "import type { CatchBoundaryComponent } from '@remix-run/react';",
-            "export const ${1:$TM_FILENAME_BASE} = () => { return(<section></section>)};",
+            "const ${1:$TM_FILENAME_BASE} = () => { return(<section></section>)};",
+            "export default ${1:$TM_FILENAME_BASE}",
             "export const loader: LoaderFunction = ({request, params}) => {}",
             "export const action: ActionFunction = ({request, params}) => {}",
             "export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => <div>error boundary</div>",

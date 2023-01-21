@@ -6,6 +6,7 @@ Welcome! This is the repo for the `remix-ts-snippets` extension for Visual Studi
   - [Features](#features)
   - [Release Notes](#release-notes)
     - [1.1.3](#113)
+    - [1.1.3](#113-1)
     - [1.1.2](#112)
     - [1.1.0](#110)
     - [1.0.0](#100)
@@ -21,6 +22,7 @@ All commands start with `rmx:`.
 | Function                        | Command     |
 | --------------------------------|------------ |
 | Meta                            | `rmx:meta`  |
+| Meta v2                         | `rmx:meta2` |
 | Links                           | `rmx:links` |
 | Action                          | `rmx:action`|
 | Loader                          | `rmx:loader`|
@@ -32,6 +34,10 @@ All commands start with `rmx:`.
 | Route component with everything | `rmx:rca`   |
 
 ## Release Notes
+
+### 1.1.3
+
+Updated route component snippet to export default on component. Added Meta v2 snippet.
 
 ### 1.1.3
 
