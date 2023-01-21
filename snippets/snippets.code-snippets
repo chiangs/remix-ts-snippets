@@ -11,7 +11,7 @@
         "prefix": "rmx:meta2",
         "body": [
             "import type { V2_MetaFunction } from '@remix-run/node';",
-            "export const meta: MetaFunction = () => { return [{ ${1:key}: '${2:value}' }]};"
+            "export const meta: V2_MetaFunction = () => { return [{ ${1:key}: '${2:value}' }]};"
         ],
         "description": "Remix meta function"
     },
@@ -94,6 +94,22 @@
             "export const CatchBoundary: CatchBoundaryComponent = ({ error }) => <div>catch boundary</div>",
             "export const links: LinksFunction = () => [];",
             "export const meta: MetaFunction = () => ({});"
+        ],
+        "description": "Remix Route Component with meta, links, loader, action, and boundaries"
+    },
+    "Remix Route Component with all v2": {
+        "prefix": "rmx:rca2",
+        "body": [
+            "import type { ActionFunction, ErrorBoundaryComponent, LinksFunction, LoaderFunction, V2_MetaFunction } from '@remix-run/node';",
+            "import type { CatchBoundaryComponent } from '@remix-run/react';",
+            "const ${1:$TM_FILENAME_BASE} = () => { return(<section></section>)};",
+            "export default ${1:$TM_FILENAME_BASE}",
+            "export const loader: LoaderFunction = ({request, params}) => {}",
+            "export const action: ActionFunction = ({request, params}) => {}",
+            "export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => <div>error boundary</div>",
+            "export const CatchBoundary: CatchBoundaryComponent = ({ error }) => <div>catch boundary</div>",
+            "export const links: LinksFunction = () => [];",
+            "export const meta: V2_MetaFunction = () => ({});"
         ],
         "description": "Remix Route Component with meta, links, loader, action, and boundaries"
     }
