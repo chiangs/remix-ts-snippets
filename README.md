@@ -5,7 +5,7 @@ Welcome! This is the repo for the `remix-ts-snippets` extension for Visual Studi
 - [Remix Snippets](#remix-snippets)
   - [Features](#features)
   - [Release Notes](#release-notes)
-    - [1.2.1](#121)
+    - [1.2.2](#122)
     - [1.1.3](#113)
     - [1.1.2](#112)
     - [1.1.0](#110)
@@ -35,7 +35,7 @@ All commands start with `rmx:`.
 
 ## Release Notes
 
-### 1.2.1
+### 1.2.2
 
 Updated route component snippet to export default on component. 
 

@@ -109,7 +109,7 @@
             "export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => <div>error boundary</div>",
             "export const CatchBoundary: CatchBoundaryComponent = ({ error }) => <div>catch boundary</div>",
             "export const links: LinksFunction = () => [];",
-            "export const meta: V2_MetaFunction = () => ({});"
+            "export const meta: V2_MetaFunction = () => [];"
         ],
         "description": "Remix Route Component with meta, links, loader, action, and boundaries"
     }
