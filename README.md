@@ -3,13 +3,22 @@
 Welcome! This is the repo for the `remix-ts-snippets` extension for Visual Studio Code.
 
 - [Remix Snippets](#remix-snippets)
+  - [Packaging and Publishing](#packaging-and-publishing)
   - [Features](#features)
   - [Release Notes](#release-notes)
+    - [1.2.3](#123)
     - [1.2.2](#122)
     - [1.1.3](#113)
     - [1.1.2](#112)
     - [1.1.0](#110)
     - [1.0.0](#100)
+
+## Packaging and Publishing
+
+```sh
+vsce package
+vsce publish
+```
 
 ## Features
 
@@ -34,6 +43,10 @@ All commands start with `rmx:`.
 | Route component with everything | `rmx:rca`   |
 
 ## Release Notes
+
+### 1.2.3
+
+Updated args typing for Actions and Loaders.
 
 ### 1.2.2
 

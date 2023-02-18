@@ -28,7 +28,7 @@
         "prefix": "rmx:action",
         "body": [
             "import type { ActionFunction } from '@remix-run/node';",
-            "export const action: ActionFunction = ({request, params}) => { ${1} }"
+            "export const action: ActionFunction = ({request, params}:ActionArgs) => { ${1} }"
         ],
         "description": "Remix actions function"
     },
@@ -36,7 +36,7 @@
         "prefix": "rmx:loader",
         "body": [
             "import type { LoaderFunction } from 'react-router';",
-            "export const loader: LoaderFunction = ({request, params}) => { ${1} }"
+            "export const loader: LoaderFunction = ({request, params}:LoaderArgs) => { ${1} }"
         ],
         "description": "Remix loader function"
     },
@@ -88,8 +88,8 @@
             "import type { CatchBoundaryComponent } from '@remix-run/react';",
             "const ${1:$TM_FILENAME_BASE} = () => { return(<section></section>)};",
             "export default ${1:$TM_FILENAME_BASE}",
-            "export const loader: LoaderFunction = ({request, params}) => {}",
-            "export const action: ActionFunction = ({request, params}) => {}",
+            "export const loader: LoaderFunction = ({request, params}:LoaderArgs) => {}",
+            "export const action: ActionFunction = ({request, params}:ActionArgs) => {}",
             "export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => <div>error boundary</div>",
             "export const CatchBoundary: CatchBoundaryComponent = ({ error }) => <div>catch boundary</div>",
             "export const links: LinksFunction = () => [];",
@@ -104,8 +104,8 @@
             "import type { CatchBoundaryComponent } from '@remix-run/react';",
             "const ${1:$TM_FILENAME_BASE} = () => { return(<section></section>)};",
             "export default ${1:$TM_FILENAME_BASE}",
-            "export const loader: LoaderFunction = ({request, params}) => {}",
-            "export const action: ActionFunction = ({request, params}) => {}",
+            "export const loader: LoaderFunction = ({request, params}:LoaderArgs) => {}",
+            "export const action: ActionFunction = ({request, params}:ActionArgs) => {}",
             "export const ErrorBoundary: ErrorBoundaryComponent = ({ error }) => <div>error boundary</div>",
             "export const CatchBoundary: CatchBoundaryComponent = ({ error }) => <div>catch boundary</div>",
             "export const links: LinksFunction = () => [];",
