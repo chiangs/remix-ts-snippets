@@ -1,9 +1,46 @@
 # Change Log
 
-All notable changes to the "remix-snippets" extension will be documented in this file.
+- [Change Log](#change-log)
+  - [1.3.0](#130)
+  - [1.2.3](#123)
+  - [1.2.2](#122)
+  - [1.1.3](#113)
+  - [1.1.2](#112)
+  - [1.1.0](#110)
+  - [1.0.0](#100)
 
-Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how to structure this file.
+## 1.3.0
 
-## [Unreleased]
+Updated for .ts files so that the snippets are available for resource routes.
 
-- Initial release
+Moved to changelog.
+
+## 1.2.3
+
+Updated args typing for Actions and Loaders.
+
+## 1.2.2
+
+Updated route component snippet to export default on component. 
+
+Added v2:
+
+`rmx:meta2`
+
+`rmx:rca2`
+
+## 1.1.3
+
+Update `rmx:bcp` to have a return since it's likely there will be additional logic when given props.
+
+## 1.1.2
+
+Fix ActionFunction naming and imports.
+
+## 1.1.0
+
+Update of README with commands and fix language support in manifest.
+
+## 1.0.0
+
+Initial release of ***Remix TS Snippets***.
