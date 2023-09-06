@@ -24,12 +24,10 @@ All commands start with `rmx:`.
 | Function                        | Command     |
 | --------------------------------|------------ |
 | Meta                            | `rmx:meta`  |
-| Meta v2                         | `rmx:meta2` |
 | Links                           | `rmx:links` |
 | Action                          | `rmx:action`|
 | Loader                          | `rmx:loader`|
 | ErrorBoundary                   | `rmx:error` |
-| CatchBoundary                   | `rmx:catch` |
 | Basic component                 | `rmx:bc`    |
 | Basic component w/ props        | `rmx:bcp`   |
 | Route component                 | `rmx:rc`    |
