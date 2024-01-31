@@ -2,16 +2,16 @@
     "Remix LoaderFunction": {
         "prefix": "rmx:loader",
         "body": [
-            "import type { LoaderFunction } from '@remix-run/node';",
-            "export const loader: LoaderFunction = ({request, params}:LoaderArgs) => { ${1} }"
+            "import type { LoaderFunction, LoaderFunctionArgs } from '@remix-run/node';",
+            "export const loader: LoaderFunction = ({request, params}:LoaderFunctionArgs) => { ${1} }"
         ],
         "description": "Remix loader function"
     },
     "Remix ActionFunction": {
         "prefix": "rmx:action",
         "body": [
-            "import type { ActionFunction } from '@remix-run/node';",
-            "export const action: ActionFunction = ({request, params}:ActionArgs) => { ${1} }"
+            "import type { ActionFunction, ActionFunctionArgs } from '@remix-run/node';",
+            "export const action: ActionFunction = ({request, params}:ActionFunctionArgs) => { ${1} }"
         ],
         "description": "Remix actions function"
     },
@@ -19,7 +19,32 @@
         "prefix": "rmx:error",
         "body": [
             "import { isRouteErrorResponse, useRouteError} from '@remix-run/react';",
-            "export const ErrorBoundary = () => { const error = useRouteError(); if (isRouteErrorResponse(error)) { return ( ${1:errorComponent}; ); } else if (error instanceof Error) { return ( <div><h1>Error</h1><p>{error.message}</p><p>The stack trace is:</p><pre>{error.stack}</pre></div>);} else {return <h1>Unknown Error</h1>;}}"
+"export function ErrorBoundary() {
+  const error = useRouteError();
+
+  if (isRouteErrorResponse(error)) {
+    return (
+      <div>
+        <h1>
+          {error.status} {error.statusText}
+        </h1>
+        <p>{error.data}</p>
+      </div>
+    );
+  } else if (error instanceof Error) {
+    return (
+      <div>
+        <h1>Error</h1>
+        <p>{error.message}</p>
+        <p>The stack trace is:</p>
+        <pre>{error.stack}</pre>
+      </div>
+    );
+  } else {
+    return <h1>Unknown Error</h1>;
+  }
+}
+"
         ],
         "description": "Remix error boundary"
     },
@@ -35,32 +60,30 @@
     "Remix MetaFunction": {
         "prefix": "rmx:meta2",
         "body": [
-            "import type { V2_MetaFunction } from '@remix-run/node';",
-            "export const meta: V2_MetaFunction = () => [{ ${1:key}: '${2:value}' }];"
+            "import type { MetaFunction } from '@remix-run/node';",
+            "export const meta: MetaFunction = () => [{ ${1:key}: '${2:value}' }];"
         ],
         "description": "Remix meta function"
     },
     "Remix Basic Component": {
         "prefix": "rmx:bc",
         "body": [
-            "export const TEST_ID = '${1:testId}';",
-            "export const ${2:$TM_FILENAME_BASE} = () => <div data-testid={TEST_ID}></div>;"
+            "export const ${2:$TM_FILENAME_BASE} = () => <div>${2:$TM_FILENAME_BASE}</div>;"
         ],
         "description": "Remix basic component"
     },
     "Remix Basic Component with Props": {
         "prefix": "rmx:bcp",
         "body": [
-            "export const TEST_ID = '${1:testId}';",
             "type Props = { ${2:key}: ${3:type} };",
-            "export const ${4:$TM_FILENAME_BASE} = ({${2:key}}:Props) => { return(<div data-testid={TEST_ID}></div>)};"
+            "export const ${4:$TM_FILENAME_BASE} = ({${2:key}}:Props) => { return(<div>${4:$TM_FILENAME_BASE}</div>)};"
         ],
         "description": "Remix basic component with props"
     },
     "Remix Basic Route Component": {
         "prefix": "rmx:rc",
         "body": [
-            "const ${1:$TM_FILENAME_BASE} = () => <section>${2:componentUI}</section>;",
+            "const ${1:$TM_FILENAME_BASE} = () => <section>${1:$TM_FILENAME_BASE}</section>;",
             "export default ${1:$TM_FILENAME_BASE}"
         ],
         "description": "Remix route component"
@@ -68,14 +91,15 @@
     "Remix Route Component with all": {
         "prefix": "rmx:rca",
         "body": [
-            "import type { ActionFunction, LinksFunction, LoaderFunction, V2_MetaFunction } from '@remix-run/node';",
+            "import type { ActionFunction, ActionFunctionArgs, LinksFunction, LoaderFunction, LoaderFunctionArgs, MetaFunction } from '@remix-run/node';",
+            "import { isRouteErrorResponse, useRouteError} from '@remix-run/react';",
             "const ${1:$TM_FILENAME_BASE} = () => { return(<section></section>)};",
             "export default ${1:$TM_FILENAME_BASE}",
-            "export const loader: LoaderFunction = ({request, params}:LoaderArgs) => {}",
-            "export const action: ActionFunction = ({request, params}:ActionArgs) => {}",
-            "export const ErrorBoundary = () => { const error = useRouteError(); if (isRouteErrorResponse(error)) { return ( ${1:errorComponent}; ); } else if (error instanceof Error) { return ( <div><h1>Error</h1><p>{error.message}</p><p>The stack trace is:</p><pre>{error.stack}</pre></div>);} else {return <h1>Unknown Error</h1>;}}",
+            "export const loader: LoaderFunction = ({request, params}:LoaderFunctionArgs) => { return [] }",
+            "export const action: ActionFunction = ({request, params}:ActionFunctionArgs) => { return null }",
+            "export const ErrorBoundary = () => { }",
             "export const links: LinksFunction = () => [];",
-            "export const meta: V2_MetaFunction = () => [];"
+            "export const meta: MetaFunction = () => [];"
         ],
         "description": "Remix Route Component with meta, links, loader, action, and boundaries"
     }
