@@ -3,7 +3,7 @@
         "prefix": "rmx:loader",
         "body": [
             "import type { LoaderFunction, LoaderFunctionArgs } from '@remix-run/node';",
-            "export const loader: LoaderFunction = ({request, params}:LoaderFunctionArgs) => { ${1} }"
+            "export const loader: LoaderFunction = ({request, params}:LoaderFunctionArgs) => { ${1} return {} }"
         ],
         "description": "Remix loader function"
     },
@@ -11,7 +11,7 @@
         "prefix": "rmx:action",
         "body": [
             "import type { ActionFunction, ActionFunctionArgs } from '@remix-run/node';",
-            "export const action: ActionFunction = ({request, params}:ActionFunctionArgs) => { ${1} }"
+            "export const action: ActionFunction = ({request, params}:ActionFunctionArgs) => { ${1} return null }"
         ],
         "description": "Remix actions function"
     },
@@ -19,32 +19,7 @@
         "prefix": "rmx:error",
         "body": [
             "import { isRouteErrorResponse, useRouteError} from '@remix-run/react';",
-"export function ErrorBoundary() {
-  const error = useRouteError();
-
-  if (isRouteErrorResponse(error)) {
-    return (
-      <div>
-        <h1>
-          {error.status} {error.statusText}
-        </h1>
-        <p>{error.data}</p>
-      </div>
-    );
-  } else if (error instanceof Error) {
-    return (
-      <div>
-        <h1>Error</h1>
-        <p>{error.message}</p>
-        <p>The stack trace is:</p>
-        <pre>{error.stack}</pre>
-      </div>
-    );
-  } else {
-    return <h1>Unknown Error</h1>;
-  }
-}
-"
+            "export function ErrorBoundary() { const error = useRouteError(); if (isRouteErrorResponse(error)) { return (<div><h1>{error.status} {error.statusText}</h1><p>{error.data}</p></div>); } else if (error instanceof Error) { return (<div><h1>Error</h1><p>{error.message}</p><p>The stack trace is:</p><pre>{error.stack}</pre></div>); } else { return <h1>Unknown Error</h1>; }}"
         ],
         "description": "Remix error boundary"
     },
@@ -58,7 +33,7 @@
         "description": "Remix links function"
     },
     "Remix MetaFunction": {
-        "prefix": "rmx:meta2",
+        "prefix": "rmx:meta",
         "body": [
             "import type { MetaFunction } from '@remix-run/node';",
             "export const meta: MetaFunction = () => [{ ${1:key}: '${2:value}' }];"
